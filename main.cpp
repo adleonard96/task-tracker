@@ -14,8 +14,11 @@ int main(int argc, char* argv[])
     //     return 1;
     // }
 
-    ofstream taskList("tasks.json");
-    taskList.close();
+    FILE* fileExist = fopen("tasks.json", "r");
+    if(!fileExist){
+        ofstream taskList("tasks.json");
+        taskList.close();
+    }
 
     ifstream taskListInput("tasks.json");
     string line;
