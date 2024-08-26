@@ -16,8 +16,9 @@ int main(int argc, char* argv[])
 
     FILE* fileExist = fopen("tasks.json", "r");
     if(!fileExist){
-        ofstream taskList("tasks.json");
-        taskList.close();
+        FILE* taskList = fopen("tasks.json", "w");
+        fputs("{\"tasks\":[]}", taskList);
+        fclose(taskList);
     }
 
     ifstream taskListInput("tasks.json");
