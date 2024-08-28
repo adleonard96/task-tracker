@@ -10,12 +10,12 @@ class Task {
         string status;
         time_t createdAt;
         time_t updatedAt;
-        Task(string param_id, string param_description, string param_status, time_t param_createdAt, time_t param_updatedAt){
-            id = param_id;
-            description = param_description;
-            status = param_status;
-            createdAt = param_createdAt;
-            updatedAt = param_updatedAt;  
+        Task(string m_id, string m_description, string m_status, time_t m_createdAt, time_t m_updatedAt){
+            id = m_id;
+            description = m_description;
+            status = m_status;
+            createdAt = m_createdAt;
+            updatedAt = m_updatedAt;  
         }
 
         void setUpdatedAt(){
