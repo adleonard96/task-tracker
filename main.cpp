@@ -3,6 +3,7 @@
 #include <string>
 #include <fstream>
 #include "Task.cpp"
+#include "JsonParser.cpp"
 
 using namespace std;
 
@@ -27,11 +28,9 @@ int main(int argc, char* argv[])
     }
     fclose(fileExist);
 
-    ifstream taskListInput("tasks.json");
-    string line;
-    while(getline(taskListInput, line)){
-        printf("%s", &line);
-    }
+    JsonParser taskParser("tasks.json");
+    taskParser.getTasks();
+
 
     printf("program input is: %s", argv[0]);
 }

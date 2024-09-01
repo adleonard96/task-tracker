@@ -26,8 +26,9 @@ class JsonParser {
 
             while (getline(tasksJson, line))
             {
-                /* code */
+                printf("%s", &line);
             }
             
+            return tasks;
         }
 };
