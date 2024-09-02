@@ -1,6 +1,7 @@
 #include <fstream>
 #include <map>
 #include <vector>
+#include <iostream>
 #include "Task.cpp"
 
 using namespace std;
@@ -26,7 +27,7 @@ class JsonParser {
 
             while (getline(tasksJson, line))
             {
-                printf("%s", &line);
+                printf("%s", line.c_str());
             }
             
             return tasks;

@@ -1,7 +1,11 @@
-using namespace std;
+#ifndef TASK_H
+#define TASK_H
+
 #include <string>
 #include <stdio.h>
 #include <ctime>
+
+using namespace std;
 
 class Task {
     public:
@@ -10,6 +14,7 @@ class Task {
         string status;
         time_t createdAt;
         time_t updatedAt;
+        
         Task(string id, string description, string status, time_t createdAt, time_t updatedAt){
             this->id = id;
             this->description = description;
@@ -24,3 +29,4 @@ class Task {
             this->updatedAt = now;
         }
 };
+#endif

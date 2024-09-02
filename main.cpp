@@ -13,9 +13,10 @@ const int INPUT_INDEX = 1;
 int main(int argc, char* argv[])
 {
 
-    const string NO_PARAMETERS_PROVIDED_VALUE = "2>CON";
-    string arg1 = argv[INPUT_INDEX];
-    if(arg1 == NO_PARAMETERS_PROVIDED_VALUE){
+    // const string NO_PARAMETERS_PROVIDED_VALUE = "2>CON";
+    // string arg1 = argv[INPUT_INDEX];
+    // if(arg1 == NO_PARAMETERS_PROVIDED_VALUE){
+    if(!argv[INPUT_INDEX]){
         std::cout << "input params where not provided";
         return 1;
     }
@@ -30,7 +31,4 @@ int main(int argc, char* argv[])
 
     JsonParser taskParser("tasks.json");
     taskParser.getTasks();
-
-
-    printf("program input is: %s", argv[0]);
 }
